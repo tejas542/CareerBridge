@@ -1,6 +1,6 @@
 package com.careerbridge.Careerbridge.dto;
 
-import org.springframework.security.web.firewall.StrictHttpFirewall;
+// import org.springframework.security.web.firewall.StrictHttpFirewall;
 
 import lombok.Data;
 
