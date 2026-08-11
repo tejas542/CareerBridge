@@ -31,7 +31,7 @@ public class ApplicationServiceImpl implements ApplicationService {
     private final CompanyRepository companyRepository;
 
     private final UserRepository userRepository;
-    
+
     private User getLoggedInUser() {
 
         Authentication authentication =
@@ -48,7 +48,8 @@ public class ApplicationServiceImpl implements ApplicationService {
 
         User user = getLoggedInUser();
 
-        return studentRepository.findByUser(user).orElseThrow(() -> new RuntimeException("Student profilee not found"));
+        return studentRepository.findByUser(user).orElseThrow(() -> 
+        new RuntimeException("Student profilee not found"));
 
     }
 
@@ -56,7 +57,8 @@ public class ApplicationServiceImpl implements ApplicationService {
 
         User user = getLoggedInUser();
 
-        return companyRepository.findByUser(user).orElseThrow(() -> new RuntimeException("Company profile not found"));
+        return companyRepository.findByUser(user).orElseThrow(() -> 
+        new RuntimeException("Company profile not found"));
 
     }
 
